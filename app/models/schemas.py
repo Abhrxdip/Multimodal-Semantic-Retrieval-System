@@ -18,10 +18,11 @@ class Citation(BaseModel):
 
 
 class QueryRequest(BaseModel):
-    mode: Literal["text", "image", "audio"]
+    mode: Literal["text", "image", "audio", "video"]
     text: str | None = None
     image_b64: str | None = None
     audio_b64: str | None = None
+    video_b64: str | None = None
     top_k: int = Field(default=5, ge=1, le=50)
     max_context_chunks: int = Field(default=6, ge=1, le=20)
     use_hybrid: bool = True
@@ -38,6 +39,8 @@ class QueryRequest(BaseModel):
             raise ValueError("image_b64 is required when mode='image'")
         if self.mode == "audio" and not self.audio_b64:
             raise ValueError("audio_b64 is required when mode='audio'")
+        if self.mode == "video" and not self.video_b64:
+            raise ValueError("video_b64 is required when mode='video'")
         return self
 
 

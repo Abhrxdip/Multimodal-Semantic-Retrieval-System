@@ -49,9 +49,15 @@ class RagPipeline:
             # Placeholder for vision encoder extraction.
             size = len(base64.b64decode(request.image_b64 or "", validate=False))
             return f"image-query bytes={size}"
-        # Placeholder for ASR output from audio.
-        size = len(base64.b64decode(request.audio_b64 or "", validate=False))
-        return f"audio-query bytes={size}"
+        if request.mode == "audio":
+            # Placeholder for ASR output from audio.
+            size = len(base64.b64decode(request.audio_b64 or "", validate=False))
+            return f"audio-query bytes={size}"
+        if request.mode == "video":
+            # Placeholder for video frame extraction and temporal analysis.
+            size = len(base64.b64decode(request.video_b64 or "", validate=False))
+            return f"video-query bytes={size}"
+        return ""
 
     def answer(self, request: QueryRequest, trace_id: str) -> tuple[str, list[Citation], RequestTrace]:
         trace = RequestTrace(
