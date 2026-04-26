@@ -7,8 +7,10 @@ uvicorn.log
 coverage.xml
 htmlcov/
 
-# Generated local benchmark runs can be committed selectively if desired.
-benchmark_runs/
+# Allow committed benchmark reports but ignore temporary runs
+benchmark_runs/**
+!benchmark_runs/local-proof-run/
+!benchmark_runs/local-proof-run/**
 
 # Local environment files
 .env
