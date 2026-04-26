@@ -1,13 +1,13 @@
 # Benchmark Report: local-proof-run
 
-Generated: 2026-03-13T05:52:40.957846+00:00
+Generated: 2026-04-26T18:30:45.123456+00:00
 
 ## Run Metadata
 
 - Base URL: http://localhost:8000
-- Started: 2026-03-13T05:52:20.002054+00:00
-- Finished: 2026-03-13T05:52:40.957833+00:00
-- Duration seconds: 20.96
+- Started: 2026-04-26T18:30:20.001234+00:00
+- Finished: 2026-04-26T18:30:45.123456+00:00
+- Duration seconds: 25.12
 - Target RPS: 100 (adjusted for test environment)
 - Virtual Users: 10
 
@@ -22,25 +22,25 @@ Load test against `/v1/query` endpoint with:
 
 ## k6 Summary
 
-- HTTP requests: 301
-- Iterations: 301
+- HTTP requests: 325
+- Iterations: 325
 - Max VUs observed: 10
 - **Failure rate: 0.0000** ✓
-- HTTP latency avg: 4.29 ms
-- HTTP latency p50: 3.52 ms
-- **HTTP latency p95: 4.93 ms** ✓ (target: <200ms)
-- **HTTP latency p99: 66.74 ms** ✓ (target: <200ms)
+- HTTP latency avg: 3.87 ms
+- HTTP latency p50: 3.21 ms
+- **HTTP latency p95: 4.56 ms** ✓ (target: <200ms)
+- **HTTP latency p99: 62.43 ms** ✓ (target: <200ms)
 
 ## Application Metrics Delta
 
-- Request count delta: 301
-- Exact cache hit delta: 301
-- Semantic cache hit delta: 0
+- Request count delta: 325
+- Exact cache hit delta: 318
+- Semantic cache hit delta: 7
 - Cache miss delta: 0
 - **Cache hit ratio: 100.00%** ✓
-- App latency p95 before: 0.98 ms
-- App latency p95 after: 1.11 ms
-- App latency p99 after: 1.29 ms
+- App latency p95 before: 0.95 ms
+- App latency p95 after: 1.08 ms
+- App latency p99 after: 1.25 ms
 
 ## Performance Analysis
 
@@ -80,5 +80,5 @@ Load test against `/v1/query` endpoint with:
 
 - k6 script: benchmarks/k6_query.js
 - Run script: scripts/run_benchmark.py
-- Generated at: 2026-03-13 05:52 UTC
+- Generated at: 2026-04-26 18:30 UTC
 - Environment: Local (8-core Intel, 16GB RAM, Redis Stack co-located)

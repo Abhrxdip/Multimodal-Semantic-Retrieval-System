@@ -1,15 +1,15 @@
 {
   "counters": {
-    "requests_total": 301.0,
-    "requests_mode_text_total": 301.0,
-    "cache_miss_total": 1.0,
-    "cache_exact_hit_total": 300.0
+    "requests_total": 325.0,
+    "requests_mode_text_total": 325.0,
+    "cache_miss_total": 0.0,
+    "cache_exact_hit_total": 318.0
   },
   "latency": {
-    "count": 301,
-    "avg_ms": 0.7209,
-    "p50_ms": 0.631,
-    "p95_ms": 0.9809,
-    "p99_ms": 1.265
+    "count": 325,
+    "avg_ms": 0.6812,
+    "p50_ms": 0.598,
+    "p95_ms": 0.9523,
+    "p99_ms": 1.187
   }
 }
